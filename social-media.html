@@ -3,145 +3,254 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="robots" content="noindex, nofollow" />
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
- "�  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Media Management — Caro | Comms, Events & Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #111111;
+      --surface: #1c1c1c;
+      --text: #f2f2f2;
+      --text-muted: #888888;
+      --accent: #9040d0;
+      --border: #2c2c2c;
+      --radius: 12px;
+      --max-w: 880px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #070507;
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 15, 15, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-back {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--text); }
+
+    .nav-sep { color: var(--border); font-size: 1rem; }
+
+    .nav-current {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    /* ── Hero ── */
+    .hero-bg-wrap {
+      position: relative;
+      overflow: hidden;
+      background-image:
+        linear-gradient(to bottom, rgba(5, 3, 7, 0.25) 0%, rgba(5, 3, 7, 0.60) 55%, #070507 100%),
+        url('images/hero-bg.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3.5rem 2rem 7rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+      background: #ede8f5;
+      color: #6a1aaa;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.8;
+      max-width: 620px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    /* ── Tweets ── */
+    .tweets-section {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 1rem 2rem 4rem;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .tweets-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    /* ── Back CTA ── */
+    .back-cta {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    .back-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 0.65rem 1.25rem;
+      border-radius: 100px;
+      transition: all 0.2s;
+    }
+
+    .back-cta a:hover {
+      color: var(--text);
+      border-color: var(--text);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 2.5rem 1.25rem 2rem; }
+      .tweets-section { padding: 1rem 1.25rem 3rem; }
+      .tweets-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-back">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Caro
+      </a>
+      <span class="nav-sep">/</span>
+      <span class="nav-current">Social Media Management</span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero-bg-wrap">
+    <div class="hero">
+      <span class="tag">Marketing</span>
+      <h1>Social Media Management</h1>
+      <p class="hero-desc">
+        Ran socials for CoinFabrik with X as the lead channel. Focused on client
+        spotlights and product update announcements for their security tools.
+        Content tailored to CoinFabrik's client ecosystems: Algorand, Stacks,
+        Polkadot, and Stellar.
+      </p>
+    </div>
+  </div>
+
+  <!-- Tweets -->
+  <div class="tweets-section">
+    <p class="section-label">Selected posts</p>
+    <div class="tweets-grid">
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1900592956349833418"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1818703695942430748"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1847351407948464552"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1806778732033847724"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1925567337274429634"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1819165980502733059"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1760780829712658521"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1808522310787190805"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1796268172288356806"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1814359638927913140"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1851644897402445860"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1825990200801067147"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1806032920861180025"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1924872762520137967"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1810350128126943433"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1900592958833127784"></a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="light" data-dnt="true"><a href="https://x.com/coinfabrik/status/1844081175419290112"></a></blockquote>
+    </div>
+  </div>
+
+  <!-- Back -->
+  <div class="back-cta">
+    <a href="index.html">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Back to all work
+    </a>
+  </div>
+
+  <footer>© 2026 Carolina Silvestre</footer>
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</body>
+</html>
