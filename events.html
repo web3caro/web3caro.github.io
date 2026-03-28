@@ -364,8 +364,7 @@
 
     @media (max-width: 640px) {
       .photo-grid { grid-template-columns: 1fr; }
-      .photo-grid img:first-child { grid-column: 1; height: 240px; }
-      .photo-grid img { height: 200px; }
+      .photo-grid img { grid-column: 1 !important; height: 220px !important; }
       .tweets-grid { grid-template-columns: 1fr; }
     }
   </style>
